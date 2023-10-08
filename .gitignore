@@ -122,11 +122,15 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.kidney_disease_classification
 env/
 venv/
+kidney_disease_classification/
 ENV/
 env.bak/
 venv.bak/
+kidney_disease_classification.bak/
+
 
 # Spyder project settings
 .spyderproject
