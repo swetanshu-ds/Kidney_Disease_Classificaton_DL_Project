@@ -1,3 +1,3 @@
-from src.cnnClassifier import logger
+from cnnClassifier import logger
+from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Welcome to our custom logging")

@@ -19,6 +19,17 @@ class DataIngestion:
             prefix = 'https://drive.google.com/uc?/export=download&id='
             gdown.download(prefix+file_id,zip_download_dir)
             logger.info(f"Downloaded data from {dataset_url} into file {zip_download_dir}")
+        except Exception as e:
+            raise e
+    
+    
+    def extract_zip_file(self):
+        unzip_path = self.config.unzip_dir
+        os.makedirs(unzip_path, exist_ok=True)
+        with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+            zip_ref.extractall(unzip_path)
+        logger.info(f"zip file {zip_ref} extracted")    
+        
             
             
                         
